@@ -1,0 +1,175 @@
+salary =  int(input("what is your salary:"))
+MOP = input("is your method of payment biweekly or monthly?")
+
+#if salary is less than 16,262.50 then write "you do not meet the minimum quotable salary"
+
+# if method of payment is biweekly, multiply salary by 2
+
+"""
+
+if its specified that its biweekly, show what happens to the number after multiplying
+it by 2, remeber to store this new number in the variable called "salary"
+
+multiply the salary by 0.0304 and save it in a variable called "first"
+
+
+multiply the salary by 0.0287 and save it in a varible called "second"
+
+
+subtract the salary by "first" and save it in a variable called SFS
+
+USE AN IF VARIABLE (IF "FIRST" IS GREATER THAN 4,742.40 PESOS, SUBTRACT SFS BY 4,742.40)
+                        ELSE: SUBTRACT SFS BY FIRST
+
+subtract the salary by "second" and save it in a variable called AFP
+
+USE AN IF VARIABLE (IF "SECOND" IS GREATER THAN 8,954.40 PESOS, SUBTRACT AFP BY 8,954.40)
+                        ELSE: SUBTRACT AFP BY SECOND
+
+add new AFP and SFS together and store it in a variable called ISR 
+
+use an if variable so that if ISR is less than or equal to 34,685.00, (see notes)
+
+use an if variable so that if ISR is greater than 34,685.00, and less than or equal to 52,027.42, (see notes)
+
+use an if variable so that if ISR is greater than 52,027.42, and less than or equal to 72,260.25, (see notes)
+
+use an if variable so that if ISR is greater than or equal to 72,621.00, (see notes)
+
+in a variable called "tw", add SFS+AFP+ISR_N
+
+in a variable called "nt", subtract salary by "tw" 
+
+if the payment method is biweekly, the values inside the net salary and total witholdings will have to be divided by two before
+they are printed
+
+print "these are the total withholdings(tw)"
+print "this is your net salary(nt)"
+
+"""
+
+#------------------------------------------------------------------------------------------------------------------------#
+
+print (salary)
+print (MOP)
+
+if salary < 16262.50:
+    print("you do not meet the minimum quotable salary")
+
+#------------------------------------------------------------------------------------------------------------------------#
+
+if MOP == "biweekly":
+    salary * 2
+    
+
+first = salary * 0.0304
+second = salary * 0.0287
+
+SFS = if first > 4742.40:
+          SFS - 4742.40
+      else:
+          SFS - first
+
+AFP = if second > 8,954.40:
+          AFP - 8954.40
+      else:
+          AFP - second
+    
+ISR = AFP + SFS
+
+if ISR <= 34685.00
+    ISR_N = ISR + 0
+    
+if ISR > 34685.00, <= 52027.42
+    ISR_N = 
+        fp = ISR - 34685.00
+        fpd = fp * 0.15
+        ISR - fpd
+        
+
+if ISR > 52027.42, <= 72260.25
+    ISR_N =
+        fp = ISR - 34685.00
+        fpd = fp * 0.15
+        sp = ISR - 52027.42
+        spd = sp * 0.20
+        ttv = fpd + spd
+        ISR - ttv
+
+if ISR => 72621.00
+    ISR_N =
+        fp = ISR - 34685.00
+        fpd = fp * 0.15
+        sp = ISR - 52027.42
+        spd = sp * 0.20
+        ttv = fpd + spd
+        tp = ISR - 72260.25
+        tpd = tp * 0.25
+        ftv = ttv + tpd
+        ISR - ftv
+
+tw = (SFS + AFP + ISR_N) / 2
+
+nt = (salary - tw) / 2
+
+
+print ("these are the total withholdings"(tw))
+print ("this is your net salary"(nt))   
+
+#------------------------------------------------------------------------------------------------------------------------#
+
+if MOP == "monthly":
+    
+
+first = salary * 0.0304
+second = salary * 0.0287
+
+SFS = if first > 4742.40:
+          SFS - 4742.40
+      else:
+          SFS - first
+
+AFP = if second > 8,954.40:
+          AFP - 8954.40
+      else:
+          AFP - second
+    
+ISR = AFP + SFS
+
+if ISR <= 34685.00
+    ISR_N = ISR + 0
+    
+if ISR > 34685.00, <= 52027.42
+    ISR_N = 
+        fp = ISR - 34685.00
+        fpd = fp * 0.15
+        ISR - fpd
+        
+
+if ISR > 52027.42, <= 72260.25
+    ISR_N =
+        fp = ISR - 34685.00
+        fpd = fp * 0.15
+        sp = ISR - 52027.42
+        spd = sp * 0.20
+        ttv = fpd + spd
+        ISR - ttv
+
+if ISR => 72621.00
+    ISR_N =
+        fp = ISR - 34685.00
+        fpd = fp * 0.15
+        sp = ISR - 52027.42
+        spd = sp * 0.20
+        ttv = fpd + spd
+        tp = ISR - 72260.25
+        tpd = tp * 0.25
+        ftv = ttv + tpd
+        ISR - ftv
+
+tw = SFS + AFP + ISR_N
+
+nt = salary - tw
+
+print ("these are the total withholdings"(tw))
+print ("this is your net salary"(nt))
